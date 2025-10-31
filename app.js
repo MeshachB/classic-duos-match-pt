@@ -20,4 +20,21 @@ cards.sort(() => Math.random() - 0.5);
 
 const board = document.getElementById("game-board");
 const timerDisplay = document.getElementById("timer");
-const runItBackBtn = document.getElementById("run-it-back");
+const runItBackBtn = document.getElementById("run-it-back"); 
+
+let flippedCards = [];
+let matched = 0;
+let timeLeft = 180;
+let timer; 
+
+
+function createBoard() {
+  cards.forEach((name) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.dataset.name = name;
+    card.textContent = "?";
+    card.addEventListener("click", flipCard);
+    board.appendChild(card);
+  });
+}

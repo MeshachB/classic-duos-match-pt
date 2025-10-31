@@ -93,3 +93,6 @@ runItBackBtn.addEventListener("click", () => {
   location.reload();
 });
 
+createBoard();
+startTimer();
+

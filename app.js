@@ -50,3 +50,33 @@ function flipCard() {
     }
   }
 }
+
+function checkMatch() {
+  const [card1, card2] = flippedCards;
+  const isPair = duos.some(
+    (pair) =>
+      (pair.match === card1.dataset.name && pair.made === card2.dataset.name) ||
+      (pair.match === card2.dataset.name && pair.made === card1.dataset.name)
+  );
+
+    if (isPair) {
+    matched += 2;
+    flippedCards = [];
+    if (matched === cards.length) endGame(true);
+  } else {
+    flippedCards.forEach((card) => {
+      card.classList.remove("flipped");
+      card.textContent = "?";
+    });
+    flippedCards = [];
+  }
+} 
+
+
+function startTimer() {
+  timer = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = `Timer: ${timeLeft}s`;
+    if (timeLeft <= 0) endGame(false);
+  }, 1000);
+}

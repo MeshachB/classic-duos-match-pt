@@ -1,0 +1,12 @@
+const duos = [
+  { match: "Kobe", made: "Shaq" },
+  { match: "Batman", made: "Robin" },
+  { match: "Kid", made: "Play" },
+  { match: "Jordan", made: "Pippen" },
+  { match: "Mario", made: "Luigi" },
+  { match: "Snoop", made: "Dre" },
+  { match: "Tom", made: "Jerry" },
+  { match: "Lilo", made: "Stitch" },
+  { match: "Steph", made: "Klay" },
+  { match: "Will", made: "Carlton" },
+];

@@ -24,7 +24,7 @@ const runItBackBtn = document.getElementById("run-it-back");
 
 let flippedCards = [];
 let matched = 0;
-let timeLeft = 99;
+let timeLeft = 90;
 let timer; 
 
 

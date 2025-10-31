@@ -87,4 +87,9 @@ function endGame(win) {
   setTimeout(() => {
     alert(win ? "You matched all the duos!" : "Time is up! Try again");
   }, 200);
-}
+} 
+
+runItBackBtn.addEventListener("click", () => {
+  location.reload();
+});
+

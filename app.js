@@ -37,4 +37,16 @@ function createBoard() {
     card.addEventListener("click", flipCard);
     board.appendChild(card);
   });
+} 
+
+function flipCard() {
+  if (flippedCards.length < 2 && !this.classList.contains("flipped")) {
+    this.classList.add("flipped");
+    this.textContent = this.dataset.name;
+    flippedCards.push(this);
+
+    if (flippedCards.length === 2) {
+      setTimeout(checkMatch, 800);
+    }
+  }
 }

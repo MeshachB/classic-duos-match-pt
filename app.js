@@ -10,3 +10,14 @@ const duos = [
   { match: "Steph", made: "Klay" },
   { match: "Will", made: "Carlton" },
 ];
+
+let cards = [];
+duos.forEach((pair) => {
+  cards.push(pair.match, pair.made);
+});
+
+cards.sort(() => Math.random() - 0.5);
+
+const board = document.getElementById("game-board");
+const timerDisplay = document.getElementById("timer");
+const runItBackBtn = document.getElementById("run-it-back");

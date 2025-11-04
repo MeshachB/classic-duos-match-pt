@@ -10,7 +10,7 @@ Getting Started
 Play the Game
 
 Live Deployment:
-Classic Duos Match (PT Mini) on GitHub Pages
+https://meshachb.github.io/classic-duos-match-pt/
 
  How to Play
 
@@ -44,24 +44,24 @@ Reset pairsMatched to 0.
 Start countdown timer using setInterval.
 Display starting timer value on the page.
 Create Event Listeners
-Each card: on click → flip the card and add it to flippedCards.
-If two cards are flipped → call checkForMatch().
+Each card: on click; flip the card and add it to flippedCards.
+If two cards are flipped; call checkForMatch().
 Run it back? button: on click → call resetGame().
 Define checkForMatch() Function
 Compare the two flipped cards’ match and made values.
-If they form a valid duo → mark both as matched and increase matchedPairs.
+If they form a valid duo; mark both as matched and increase matchedPairs.
 If not → flip both cards back face-down after a short delay.
 Clear flippedCards after each check.
-If all pairs are matched → call handleWin().
+If all pairs are matched; call handleWin().
 Define Timer Function
 Decrease timer by 1 each second.
 Update timer display.
-If timer reaches 0 → call handleGameOver().
+If timer reaches 0 ; call handleGameOver().
 Check for Game Over
-If timer runs out before all pairs are matched → display "Time’s up! Try again."
+If timer runs out before all pairs are matched; display "Time’s up! Try again."
 Stop timer and reveal Run it back? button.
  Win Condition
-If matchedPairs equals total pairs → stop timer.
+If matchedPairs equals total pairs; stop timer.
 Display "You Win!" message.
 Show Run it back? button.
 Update Display Function
